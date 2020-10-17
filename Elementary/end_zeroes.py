@@ -8,7 +8,6 @@ def end_zeros(num: int) -> int:
         else:
             break
         i += 1
-
     return j
 
 
