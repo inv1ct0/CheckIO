@@ -3,7 +3,7 @@ def max_digit(number: int) -> int:
     if len(number_list) == 1:
         return int(number_list[0])
     number_list.sort()
-    return int(number_list[len(number_list)-1])
+    return int(number_list[-1])
 
 
 if __name__ == '__main__':
