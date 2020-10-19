@@ -2,11 +2,13 @@ def nearest_value(values: set, one: int) -> int:
     list_values = list(values)
     list_values.sort()
     if one in values:
-        return int(one)
-    if int(one) == 0 and int(list_values[0]) > 0:
+        return one
+    if one == 0 and int(list_values[0]) > 0:
         return int(list_values[0])
-    if int(one) > int(list_values[len(list_values)-1]):
-        return int(list_values[len(list_values)-1])
+    if one > int(list_values[-1]):
+        return int(list_values[-1])
+    if one < int(list_values[0]):
+        return int(list_values[0])
     for num in range(len(list_values) - 1):
         if int(list_values[num]) < one < int(list_values[num+1]):
             if (one - int(list_values[num])) < (int(list_values[num+1]) - one):
