@@ -2,7 +2,13 @@ def checkio(array: list) -> int:
     """
         sums even-indexes elements and multiply at the last
     """
-    return 0
+    answer = 0
+    if not len(array):
+        return 0
+    for x in range(len(array)):
+        if x % 2 == 0:
+            answer += int(array[x])
+    return answer*array[-1]
 
 
 # These "asserts" using only for self-checking and not necessary for auto-testing
