@@ -8,7 +8,7 @@ def checkio(array: list) -> int:
     for x in range(len(array)):
         if x % 2 == 0:
             answer += int(array[x])
-    return answer*array[-1]
+    return answer * array[-1]
 
 
 # These "asserts" using only for self-checking and not necessary for auto-testing
